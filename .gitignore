@@ -9,9 +9,12 @@
 
 # production
 /dist
+/public
 
 #environment variables
 .env
+.env.development
+.env.production
 
 # misc
 .vscode/
