@@ -25,7 +25,11 @@
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
     "max-len": ["error", 80, { "ignoreComments": true }],
-    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+    "react/state-in-constructor": 0
   },
   "settings": {
     "import/resolver": {
