@@ -15,7 +15,7 @@ body {
 body {
   position: relative;
   color: #fff;
-  background-color: #14213d;
+  /* background-color: #14213d; */
   border-top: 4px solid #fca311;
   font: 300 1.5rem/1.4 'Lato', 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
@@ -73,6 +73,18 @@ strong {
 cite,
 em {
   font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+ol,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 @media (min-width: 768px) {
