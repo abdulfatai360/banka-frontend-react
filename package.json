@@ -4,8 +4,8 @@
   "description": "The frontend of Banka using ReactJS",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config config/webpack.config.js --env.env=prod",
-    "start": "webpack-dev-server --config config/webpack.config.js --env.env=dev",
+    "build": "webpack --config webapck/webpack.config.js --env.env=prod",
+    "start": "webpack-dev-server --config webpack/webpack.config.js --env.env=dev --color",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +21,10 @@
   "homepage": "https://github.com/abdulfatai360/banka-frontend-react#readme",
   "dependencies": {
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -30,9 +33,10 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "dotenv-webpack": "^1.7.0",
+    "css-loader": "^3.2.0",
     "eslint": "^6.2.1",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -40,6 +44,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "react-hot-loader": "^4.12.11",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",

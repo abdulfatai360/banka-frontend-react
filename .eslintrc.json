@@ -20,17 +20,18 @@
   },
   "plugins": ["react"],
   "rules": {
+    "comma-dangle": 0,
     "global-require": 0,
     "import/no-dynamic-require": 0,
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true,
-        "optionalDependencies": false,
-        "peerDependencies": false
-      }
-    ],
+    "import/no-extraneous-dependencies": 0,
     "max-len": ["error", 80, { "ignoreComments": true }],
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.common.js"
+      }
+    }
   }
 }

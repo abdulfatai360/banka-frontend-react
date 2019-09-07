@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@Components/*": ["src/components/*"],
+      "@Containers/*": ["src/containers/*"],
+      "@Store/*": ["src/store/*"],
+      "@Actions/*": ["src/actions/*"],
+      "@Reducers/*": ["src/reducers/*"],
+      "@Constants/*": ["src/constants/*"],
+      "@Services/*": ["src/services/*"],
+      "@Assets/*": ["src/assets/*"],
+      "App/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
