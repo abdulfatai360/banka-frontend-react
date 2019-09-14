@@ -1,0 +1,57 @@
+.Homepage__hero {
+  min-height: 100vh;
+  padding-top: 10rem;
+  color: #fff;
+  background: linear-gradient(rgba(20, 33, 61, 0.77), rgba(20, 33, 61, 0.77)),
+    url('../../assets/images/digital-worldmap-lg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 1.7em;
+}
+
+.Homepage__hero__inner {
+  width: 960px !important;
+  margin: 0 auto;
+  padding-top: 11rem;
+  padding-bottom: 2.2rem;
+  font-size: 1.1em;
+}
+
+.Homepage__hero__title {
+  font-size: 0.9em;
+  margin-bottom: 4.4rem;
+}
+
+.Homepage__hero__text--lg {
+  font-size: 3em;
+  font-weight: 900;
+  font-family: 'clarke', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.Homepage__cta {
+  display: inline-block;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  border: 1px solid #fca311;
+}
+
+.Homepage__cta:hover {
+  cursor: pointer;
+  border-color: #f09d19;
+}
+
+.Homepage__cta:hover .Homepage__cta__btn {
+  background: #f09d19;
+}
+
+.Homepage__cta__btn {
+  width: 100%;
+  padding: 1.5rem 4rem;
+  font-weight: 700;
+  text-align: center;
+}

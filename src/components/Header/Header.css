@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.Header__inner--homepage {
+  position: absolute;
+}
+
 .Header__logo {
   font-family: 'ribone', cursive;
   color: #fca311;
@@ -25,7 +29,7 @@
 
 .Header__nav {
   padding: 0.5rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .Header__nav__list {
@@ -36,9 +40,10 @@
   display: inline-block;
   padding: 1rem 2rem;
   margin-left: 1rem;
-  color: #fca311;
+  color: inherit;
 }
 
 .Header__nav__item a:hover {
+  color: #fca311;
   background: rgba(0, 0, 0, 0.22);
 }
