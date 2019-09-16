@@ -11,4 +11,15 @@ const login = (credentials) => {
   return httpService.post(url, credentials);
 };
 
-export default { signup, login };
+const getCurrentUser = () => {
+  let user = localStorage.getItem('user');
+  user = JSON.parse(user);
+
+  const isUserNull = !user || Object.keys(user).length === 0;
+  if (isUserNull) return {};
+
+  delete user.token;
+  return user;
+};
+
+export default { signup, login, getCurrentUser };
