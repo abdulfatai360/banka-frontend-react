@@ -1,0 +1,10 @@
+.NotFound__status__code {
+  font-size: 12em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.NotFound__message {
+  text-align: center;
+  font-size: 3em;
+}

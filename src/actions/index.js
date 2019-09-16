@@ -1,4 +1,9 @@
-import { SET_CURRENT_PAGE, SIGNUP } from '@Constants/actionTypes';
+import {
+  SET_CURRENT_PAGE,
+  SIGNUP,
+  GET_CURRENT_USER,
+  LOGOUT,
+} from '@Constants/actionTypes';
 import authService from '@Services/auth';
 
 export const setCurrentPage = (pageTitle) => ({
@@ -26,4 +31,14 @@ export const signup = (user) => {
   };
 
   return signupThunk;
+};
+
+export const getCurrentUser = () => ({
+  type: GET_CURRENT_USER,
+  payload: authService.getCurrentUser(),
+});
+
+export const logout = () => {
+  localStorage.removeItem('user');
+  return { type: LOGOUT };
 };

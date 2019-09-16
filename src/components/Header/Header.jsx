@@ -3,9 +3,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { getCurrentUser } from '@Actions/index';
+import SampleUserAvatar from '@Assets/images/sample-user-avatar.png';
 import './Header.css';
 
 class Header extends Component {
+  componentDidMount() {
+    const { props } = this;
+    props.getCurrentUser();
+  }
+
   setHeaderInnerClass = () => {
     const defaultValue = 'container Header__inner';
     const { props } = this;
@@ -23,25 +30,53 @@ class Header extends Component {
   };
 
   render() {
+    const { props } = this;
+    const isUserAuthenticated = Object.keys(props.currentUser).length > 0;
+
     return (
       <header className="Header">
         <div className={this.setHeaderInnerClass()}>
-          <Link to="/" className="Header__logo">
+          <Link
+            to={isUserAuthenticated ? '/profile' : '/'}
+            className="Header__logo"
+          >
             Banka
           </Link>
 
           <nav className="Header__nav">
             <ul className="Header__nav__list">
-              <li className="Header__nav__item">
-                <Link to="/signup" className={this.setNavLinkClass('signup')}>
-                  Sign Up
-                </Link>
-              </li>
-              <li className="Header__nav__item">
-                <Link to="/login" className={this.setNavLinkClass('login')}>
-                  Login
-                </Link>
-              </li>
+              {isUserAuthenticated ? (
+                <>
+                  <li className="Header__nav__item">
+                    <Link to="/logout">Log Out</Link>
+                  </li>
+                  <li className="Header__nav__item">
+                    <div className="Header__user__avatar">
+                      <img
+                        src={SampleUserAvatar}
+                        alt="User Avatar"
+                        title={props.currentUser.firstName}
+                      />
+                    </div>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="Header__nav__item">
+                    <Link
+                      to="/signup"
+                      className={this.setNavLinkClass('signup')}
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+                  <li className="Header__nav__item">
+                    <Link to="/login" className={this.setNavLinkClass('login')}>
+                      Login
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </nav>
         </div>
@@ -52,11 +87,16 @@ class Header extends Component {
 
 Header.propTypes = {
   currentPage: PropTypes.string.isRequired,
+  currentUser: PropTypes.object.isRequired,
+  getCurrentUser: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = ({ currentPage }) => ({ currentPage });
+const mapStateToProps = ({ currentPage, currentUser }) => ({
+  currentPage,
+  currentUser,
+});
 
 export default connect(
   mapStateToProps,
-  null
+  { getCurrentUser }
 )(Header);
