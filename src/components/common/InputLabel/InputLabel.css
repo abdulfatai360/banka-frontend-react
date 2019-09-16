@@ -1,0 +1,18 @@
+.InputLabel {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #384d7a;
+  text-transform: capitalize;
+}
+
+.InputLabel:hover {
+  cursor: pointer;
+}
+
+abbr[title='required'] {
+  text-decoration: none;
+  color: #dd2c00;
+  font-size: 1.3em;
+  font-weight: inherit;
+}

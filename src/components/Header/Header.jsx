@@ -14,6 +14,14 @@ class Header extends Component {
       : defaultValue;
   };
 
+  setNavLinkClass = (linkLabel) => {
+    const defaultValue = '';
+    const { props } = this;
+    return props.currentPage === linkLabel.toLowerCase()
+      ? 'current-page-link'
+      : defaultValue;
+  };
+
   render() {
     return (
       <header className="Header">
@@ -25,10 +33,14 @@ class Header extends Component {
           <nav className="Header__nav">
             <ul className="Header__nav__list">
               <li className="Header__nav__item">
-                <Link to="/login">Login</Link>
+                <Link to="/signup" className={this.setNavLinkClass('signup')}>
+                  Sign Up
+                </Link>
               </li>
               <li className="Header__nav__item">
-                <Link to="/signup">Sign Up</Link>
+                <Link to="/login" className={this.setNavLinkClass('login')}>
+                  Login
+                </Link>
               </li>
             </ul>
           </nav>
@@ -44,4 +56,7 @@ Header.propTypes = {
 
 const mapStateToProps = ({ currentPage }) => ({ currentPage });
 
-export default connect(mapStateToProps)(Header);
+export default connect(
+  mapStateToProps,
+  null
+)(Header);

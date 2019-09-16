@@ -21,15 +21,19 @@
   "plugins": ["react"],
   "rules": {
     "comma-dangle": 0,
+    "consistent-return": 0,
     "global-require": 0,
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/label-has-associated-control": 0,
     "max-len": ["error", 80, { "ignoreComments": true }],
+    "object-curly-newline": 0,
     "react/destructuring-assignment": [
       2,
       "always",
       { "ignoreClassFields": true }
     ],
+    "react/forbid-prop-types": 0,
     "react/jsx-filename-extension": [
       "error",
       { "extensions": [".js", ".jsx"] }

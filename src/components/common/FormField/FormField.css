@@ -1,0 +1,9 @@
+.FormField {
+  margin-bottom: 1rem;
+}
+
+.FormField__error {
+  font-size: 0.95em;
+  color: #dd2c00;
+  font-weight: 300;
+}
