@@ -43,7 +43,8 @@
   color: inherit;
 }
 
-.Header__nav__item a:hover {
-  color: #fca311;
+.Header__nav__item a:hover,
+.current-page-link {
+  color: #fca311 !important;
   background: rgba(0, 0, 0, 0.22);
 }

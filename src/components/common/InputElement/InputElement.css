@@ -1,0 +1,27 @@
+.InputElement {
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: 300;
+  background: transparent;
+  border: 1px solid #8b8787;
+}
+
+.InputElement:disabled,
+.InputElement:read-only {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #e5e5e5 !important;
+}
+
+.InputElement:focus {
+  border-color: #14213d;
+}
+
+.InputElement::placeholder {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.InputElement--has-error {
+  border-color: #dd2c00;
+}

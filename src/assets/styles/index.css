@@ -100,6 +100,22 @@ ul {
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+a,
+.link-in-p {
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.link-in-p {
+  color: #14213d;
+  border-bottom: 1px solid;
+}
+
+.link-in-p:hover {
+  cursor: pointer;
+  border-bottom-color: transparent;
+}
+
 @media (min-width: 768px) {
   body {
     font-size: 1.55rem;
