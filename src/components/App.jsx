@@ -6,11 +6,13 @@ import Signup from '@Components/Signup/Signup';
 import Profile from '@Components/Profile/Profile';
 import Logout from '@Components/Logout/Logout';
 import NotFound from '@Components/NotFound/NotFound';
+import Login from '@Components/Login/Login';
 
 const App = () => (
   <BrowserRouter>
     <Header />
     <Switch>
+      <Route path="/login" component={Login} />
       <Route path="/logout" component={Logout} />
       <Route path="/profile" component={Profile} />
       <Route path="/signup" component={Signup} />
